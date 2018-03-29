@@ -20,7 +20,8 @@ source "$quickstartRootDir/bash/scripts/files_helper_funcs.sh"
 source "$quickstartRootDir/bash/scripts/curl_helper_funcs.sh"
 source "$quickstartRootDir/bash/scripts/predix_funcs.sh"
 source "$quickstartRootDir/bash/common/verifymvn.sh"
-source "$rootDir/bash/scripts/local-setup-funcs.sh"
+source "$quickstartRootDir/bash/scripts/local-setup-funcs.sh"
+source "$quickstartRootDir/bash/scripts/build-basic-app-readargs.sh"
 
 if [ "${TERM/term}" = "$TERM" ] ; then
   COLUMNS=50

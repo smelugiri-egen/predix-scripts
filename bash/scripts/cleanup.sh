@@ -3,7 +3,7 @@ set -e
 # Cleanup Script
 # Authors: GE SDLP 2015
 #
-
+quickstartRootDir="$( pwd )/predix-scripts"
 rootDir=$quickstartRootDir
 logDir="$rootDir/log"
 
