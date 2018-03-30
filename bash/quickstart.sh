@@ -6,7 +6,7 @@ set -e
 # Be sure to set all your variables in the variables.sh file before you run quick start!
 
 #quickstartRootDir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-quickstartRootDir="$( pwd )/predix-scripts"
+quickstartRootDir="$( pwd )" #make sure you are in predix-scripts folder
 export quickstartRootDir
 cd $quickstartRootDir
 quickstartLogDir="$quickstartRootDir/log"
@@ -21,7 +21,6 @@ source "$quickstartRootDir/bash/scripts/curl_helper_funcs.sh"
 source "$quickstartRootDir/bash/scripts/predix_funcs.sh"
 source "$quickstartRootDir/bash/common/verifymvn.sh"
 source "$quickstartRootDir/bash/scripts/local-setup-funcs.sh"
-source "$quickstartRootDir/bash/scripts/build-basic-app-readargs.sh"
 
 if [ "${TERM/term}" = "$TERM" ] ; then
   COLUMNS=50
@@ -64,6 +63,10 @@ px config --locale en-US
 #"$quickstartRootDir/scripts/set_tool.sh"
 source "$quickstartRootDir/bash/readargs.sh"
 if [[ ! "$SCRIPT_READARGS" == "" ]]; then
+
+#There are multiple types of readargs files. Choose your readargs type (default: build-basic-app-readargs.sh) so that
+#processReadargs method of that script file will be executed below
+
   source "$quickstartRootDir/bash/scripts/$SCRIPT_READARGS"
   processReadargs $@
 else

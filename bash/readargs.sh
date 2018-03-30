@@ -4,9 +4,9 @@ arguments="$*"
 echo "arguments : $arguments"
 
 # Reset all variables that might be set
-INSTANCE_PREPENDER="slashdev"
-APP_SCRIPT=""
-SCRIPT_READARGS="predix_services_setup.sh"
+INSTANCE_PREPENDER="srikanth-dev"
+APP_SCRIPT="build-basic-app.sh"
+SCRIPT_READARGS="build-basic-app-readargs.sh"
 RUN_PRINT_VARIABLES=0
 BINDING_APP=0
 CONTINUE_FROM=0
